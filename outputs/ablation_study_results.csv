@@ -1,0 +1,9 @@
+Experiment,Resolution,Preprocessing,Input_Channels,Train_Time_s,Val_Accuracy,Val_Bal_Accuracy,Val_Precision,Val_Recall,Val_F1_Score,Val_ROC_AUC,Val_FP,Val_FN,Inference_ms,Checkpoint
+Exp 1: Baseline RGB,128x128,raw,3,386.3,60.12,60.12,58.42,70.24,63.78,0.6532,84,50,8.22,checkpoints/custom_baseline_128.pth
+Exp 2: Mild CLAHE (Luminance),128x128,clahe,3,242.3,62.2,62.2,60.73,69.05,64.62,0.6464,75,52,7.81,checkpoints/custom_clahe_128.pth
+Exp 3: Edge-Preserving Bilateral,128x128,bilateral,3,226.6,58.63,58.63,56.33,76.79,64.99,0.621,100,39,8.26,checkpoints/custom_bilateral_128.pth
+Exp 4: Sobel Gradient Fused (4-Ch),128x128,sobel_rgb,4,220.7,57.74,57.74,54.85,87.5,67.43,0.6653,121,21,8.27,checkpoints/custom_sobel_128.pth
+Exp 5: Forensic ELA Residuals,128x128,ela,3,215.8,60.42,60.42,60.74,58.93,59.82,0.6754,64,69,8.06,checkpoints/custom_ela_128.pth
+Exp 6: 160x160 Spatial Resolution,160x160,raw,3,353.9,56.55,56.55,53.72,94.64,68.53,0.6278,137,9,13.56,checkpoints/custom_res160_raw.pth
+Exp 7: Tuned 160x160 + Cosine LR,160x160,raw,3,406.3,54.76,54.76,52.7,92.86,67.24,0.5942,140,12,12.67,checkpoints/custom_res160_tuned.pth
+Exp 8: Custom Dual-Stream (RGB+ELA) Scratch,128x128,rgb_ela_scratch,6,1168.4,59.52,59.52,56.61,81.55,66.83,0.6904,105,31,11.2,checkpoints/custom_dual_stream_scratch.pth
